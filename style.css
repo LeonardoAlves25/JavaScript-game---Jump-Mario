@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mensagem{
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    top: 30px;
+    padding-left: 50px;
+}
+
+.pulo{
+    color: rgb(238, 49, 87);
+}
+
+.game-board{
+    width: 100%;
+    height: 600px;
+    border-bottom: 10px solid rgb(4, 176, 4);
+    margin: 0 auto;
+    position: relative;
+    /* overflow: hidden; */
+    background: linear-gradient(#87ceeb, #e0f6ff);
+}
+
+.pipe{
+    position: absolute;
+    bottom: 0; 
+    width: 80px;
+    /* left: 105px; */
+    animation: pipe-animation 1.3s infinite linear ;
+}
+
+.lakitu{
+    position: absolute;
+    width: 200px;
+    left: 900px;
+    animation: lakitu 990ms infinite ease-out;
+}
+
+.mario{
+    width: 110px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.jump{
+   animation: jump 500ms ease-out; 
+}
+
+  @keyframes pipe-animation{
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
+  @keyframes jump {
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 180px;
+    }
+
+    50%{
+        bottom: 180px;
+    }
+
+    60%{
+        bottom: 180px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}  
+
+  @keyframes lakitu{
+    0%{
+        top: 50px; left: 900px; 
+    }
+
+    12.5%{
+        top: 62.5px; left: 915px;
+    }
+
+    25%{
+        top: 75px; left: 930px;
+    }
+
+    36.5%{
+        top: 87.5px; left: 915px;
+    }
+
+    50%{
+        top: 100px; left: 900px;
+    }
+
+    62.5%{
+        top: 87.5px; left: 885px;
+    }
+
+    75%{
+        top: 75px; left: 870px;
+    }
+
+    87.5%{
+        top: 62.5px; left: 885px;
+    }
+
+    100%{
+        top: 50px; right: 900px;
+    }
+  }
